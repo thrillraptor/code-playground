@@ -27,6 +27,6 @@ public class problem03TypesAndFormatSpecifier {
     
         boolean h = true; // Implementation dependent; conceptually 1 bit (True/False)
 
-        System.out.printf("Primitive types and format specifiers\nBYTE - %d\nSHORT - %d\nINT - %d\nLONG - %d\nFLOAT - %f\nDOUBLE - %e\nCHAR - %c\nBOOLEAN - %b", a, b, c, d, e, f, g, h);
+        System.out.printf("Primitive types and format specifiers\nBYTE - %d\nSHORT - %d\nINT - [%d, %o, %x]\nLONG - %d\nFLOAT - %f\nDOUBLE - %e\nCHAR - %c\nBOOLEAN - %b", a, b, c, c, c, d, e, f, g, h);
     }
 }
