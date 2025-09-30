@@ -46,12 +46,12 @@ public class problem04ArrayInsertionAndDeletion {
                 System.out.print("Index: ");
                 int index = input.nextInt();
 
-                if (index <= count && index > -1) {
+                if (index < count - 1 && index > -1) {
 
-                    for (int i = index; i < count; i++) {
+                    for (int i = index; i < count - 1; i++) {
                         numbers[i] = numbers[i + 1];
                     }
-
+                    numbers[count - 1] = 0;
                     count = count - 1;
                 } else {
                     System.out.printf("Only delete at index [0, %d)\n", count);
