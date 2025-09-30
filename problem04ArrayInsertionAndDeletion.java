@@ -12,6 +12,7 @@ public class problem04ArrayInsertionAndDeletion {
             System.out.print("Option: ");
             int option = input.nextInt();
             if (option == 1) {
+
                 System.out.print("{ ");
                 for (int i = 0; i < numbers.length; i++) {
                     System.out.printf("%d", numbers[i]);
@@ -20,6 +21,7 @@ public class problem04ArrayInsertionAndDeletion {
                     }
                 }
                 System.out.println(" }");
+
             } else if (option == 2) {
                 if (count < numbers.length) {
                     System.out.print("At index: ");
@@ -27,9 +29,11 @@ public class problem04ArrayInsertionAndDeletion {
                     if (index <= count && index > -1) {
                         System.out.print("Number: ");
                         int number = input.nextInt();
+
                         for (int i = count - 1; i >= index; i--) {
                             numbers[i + 1] = numbers[i];
                         }
+
                         numbers[index] = number;
                         count = count + 1;
                     } else {
@@ -39,17 +43,18 @@ public class problem04ArrayInsertionAndDeletion {
                     System.out.println("Array is full.");
                 }
             } else if (option == 3) {
-                if (count < numbers.length) {
-                    System.out.print("Index: ");
-                    int index = input.nextInt();
+                System.out.print("Index: ");
+                int index = input.nextInt();
 
-                    if (index <= count && index > -1) {
-                        for (int i = index; i < count; i++) {
-                            numbers[i] = numbers[i + 1];
-                        }
-                    } else {
-                        System.out.printf("Only delete at index [0, %d)\n", count);
+                if (index <= count && index > -1) {
+
+                    for (int i = index; i < count; i++) {
+                        numbers[i] = numbers[i + 1];
                     }
+
+                    count = count - 1;
+                } else {
+                    System.out.printf("Only delete at index [0, %d)\n", count);
                 }
             } else if (option >= 4) {
                 System.out.println("Exiting.");
