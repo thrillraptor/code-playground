@@ -79,4 +79,20 @@ public class Problem07Matrix {
         }
         return minIndices;
     }
+
+    public void swapRows(int firstRow, int secondRow) {
+        for (int i = 0; i < this.rows; i++) {
+            int temp = this.matrx[secondRow][i];
+            this.matrx[secondRow][i] = this.matrx[firstRow][i];
+            this.matrx[firstRow][i] = temp;
+        }
+    }
+
+    public void swapCols(int firstCol, int secondCol) {
+        for (int i = 0; i < this.cols; i++) {
+            int temp = this.matrx[i][secondCol];
+            this.matrx[i][secondCol] = this.matrx[i][firstCol];
+            this.matrx[i][firstCol] = temp;
+        }
+    }
 }

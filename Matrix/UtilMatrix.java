@@ -16,6 +16,8 @@ public class UtilMatrix {
             System.out.println("4. Right Diagonal");
             System.out.println("5. Max Index");
             System.out.println("6. Min Index");
+            System.out.println("7. Swap Rows");
+            System.out.println("8. Swap Columns");
             System.out.print("Option Here # ");
             int option = iScanner.nextInt();
 
@@ -50,6 +52,20 @@ public class UtilMatrix {
                 System.out.printf("Row %d : Col %d", min[0], min[1]);
                 System.out.println();
             } else if (option == 7) {
+                System.out.print("Row 1 # ");
+                int firstRow = iScanner.nextInt();
+                System.out.print("Row 2 # ");
+                int secondRow = iScanner.nextInt();
+
+                m.swapRows(firstRow, secondRow);
+            } else if (option == 8) {
+                System.out.print("Column 1 # ");
+                int firstCol = iScanner.nextInt();
+                System.out.print("Column 2 # ");
+                int secondCol = iScanner.nextInt();
+
+                m.swapCols(firstCol, secondCol);
+            } else if (option == 9) {
                 break;
             }
 
